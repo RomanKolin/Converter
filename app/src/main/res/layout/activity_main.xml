@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewcreator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/creator"
+        android:textColor="@color/maroon"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButton4currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:buttonTint="@color/maroon"
+            android:fontFamily="@font/timesnewromanitalic"
+            android:onClick="onclickcurrency"
+            android:text="@string/currency"
+            android:textSize="30sp"
+            tools:ignore="NestedWeights" />
+
+        <RadioButton
+            android:id="@+id/radioButton1length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/maroon"
+            android:onClick="onclicklength"
+            android:fontFamily="@font/timesnewromanitalic"
+            android:text="@string/length"
+            android:textSize="20sp"
+            tools:ignore="NestedWeights" />
+
+        <RadioButton
+            android:id="@+id/radioButton2weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/maroon"
+            android:onClick="onclickweight"
+            android:fontFamily="@font/timesnewromanitalic"
+            android:text="@string/weight"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton3temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/maroon"
+                android:onClick="onclicktemperature"
+                android:fontFamily="@font/timesnewromanitalic"
+                android:text="@string/temperature"
+                android:textSize="20sp"/>
+
+            <CheckBox
+                android:id="@+id/checkBox1sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/maroon"
+                android:fontFamily="@font/timesnewromanitalic"
+                android:onClick="onclickchangesign"
+                android:text="@string/sign"
+                android:textSize="15sp"
+                android:visibility="invisible">
+            </CheckBox>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DisableBaselineAlignment">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <Spinner
+                android:id="@+id/spinner1from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal1from"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint0"
+                android:textColorHint="@color/darkgrey"
+                android:fontFamily="@font/timesnewroman"
+                android:textSize="20sp"
+                android:inputType="numberDecimal"
+                tools:ignore="Autofill" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.55"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner2to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/textView1to"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/timesnewroman"
+                android:textSize="35sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1change"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:background="@drawable/convertbutton"
+            android:gravity="center"
+            android:onClick="onclickconvert"
+            android:fontFamily="@font/timesnewroman"
+            android:text="@string/convert"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            tools:ignore="ButtonStyle,NestedWeights" />
+
+        <Button
+            android:id="@+id/button2clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/clearbutton"
+            android:fontFamily="@font/timesnewroman"
+            android:gravity="center"
+            android:onClick="onclickclear"
+            android:text="@string/clear"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
